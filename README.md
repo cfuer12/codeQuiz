@@ -1,1 +1,1 @@
-# codeQuiz
+# quizApp
