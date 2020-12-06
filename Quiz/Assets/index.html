@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <title>Quiz App</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+</head>
+
+<body>
+    <div id="quiz" class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Coding Quiz Challenge</h1>
+                <p id="try">Try to answer the following code related questions within the time limit!</p>
+                <!-- start button -->
+                <button class="start">Start</button>
+
+                <div id="question">Question</div>
+                <!-- buttons for each answer for the questions -->
+                <div id="answer-buttons" class="buttons">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+                <!-- timer counter starts here -->
+                <div class="card">
+                    <div class="card-body">
+                        <div id="count">Timer</div>
+                    </div>
+                </div>
+
+                <!-- results -->
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+   
+    
+
+</body>
+
+</html>
