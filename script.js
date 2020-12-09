@@ -2,15 +2,51 @@ var startButton = document.getElementById('start');
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 
-
+startButton.addEventListener("click",startQuiz)
 // start button...create a button to start quiz + advance to next page w questions
-function startQuiz()
+function startQuiz() {
+    timer();
+    document.getElementById("start").className += " hide";
+    buildQuiz(0)
+}
 
 // build the quiz...create a layout to display and make the quiz function
-function buildQuiz()
+function buildQuiz(qNum) {
+    var question = questions[qNum];
+
+    // change question  txt
+    question = ("Commonly used data types DO NOT include:");
+    // change answer txt
+    correct = ("string", "booleans", "alerts", "numbers");
+
+    var correct;
+    
+    for (var i = 0; i < question.answers.length; i++) {
+        if (question.answers[i].correct === true) {
+            correct = questions.answers[i];
+        }
+    }
+
+    document.getElementsByClassName('btn').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            if (event.textContent == correct) {
+                // right answer
+            }
+
+
+            if (qNum === questions.length - 1) {
+                // done with quiz
+            }
+            else {
+                buildQuiz(qNum + 1);
+            }
+        })
+    })
+}
 
 // build results...need to show scores towards the end of quiz somehow
-function showResults()
+// save in local storage
+function showResults() {}
 
 
 // make question for the quiz
@@ -45,9 +81,9 @@ var questions = [
     {
         question: 'String values must be enclosed within _____ when being assigned to variables',
         answer: [
-            { text: 'commas', correct: true },
+            { text: 'commas', correct: false },
             { text: 'curly brackets', correct: false },
-            { text: 'quotes', correct: false },
+            { text: 'quotes', correct: true },
             { text: 'parentheses', correct: false }
         ]
     },
